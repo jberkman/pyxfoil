@@ -143,10 +143,10 @@ class Xfoil:
                 sys.exit(ErrorMessage(txt))
         else:
             #Mac Install location
-            self.xfoilpath = "/Applications/Xfoil.app/Contents/Resources/xfoil"
+            self.xfoilpath = "/usr/local/bin/xfoil"
             #check dependencies
             if not os.path.isfile(self.xfoilpath):
-                txt = "PYXFOIL ERROR: Xfoil.app is not installed"
+                txt = "PYXFOIL ERROR: Xfoil is not installed"
                 sys.exit(ErrorMessage(txt))
             if not os.path.isfile('/opt/X11/bin/xquartz'):
                 txt = "PYXFOIL ERROR: X11/xquartz not installed"
